@@ -151,5 +151,9 @@ const messageGenerator = () => {
   const position = randomise(positionArray);
   const team = randomise(teamArray);
 
-  return `${fullName} is from ${location}. He is ${height} and is a ${position}. He plays for the ${team}.`;
+  console.log(
+    `${fullName} is from ${location}. He is ${height} and is a ${position}. He plays for the ${team}.`
+  );
 };
+
+messageGenerator();
