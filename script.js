@@ -136,5 +136,20 @@ const randomise = (array) => {
   return array[Math.floor(Math.random() * array.length)];
 };
 
-console.log(randomise(teamArray));
-// const exampleSentence = `${fullName} is from ${location}. He is ${height} and is a ${position}. He plays for the ${team}.`
+const randomHeight = () => {
+  const feet = Math.floor(Math.random() * 3 + 5);
+  const inches = Math.floor(Math.random() * 13);
+  return feet + ',' + inches;
+};
+
+const messageGenerator = () => {
+  const firstName = randomise(firstNameArray);
+  const lastName = randomise(lastNameArray);
+  const fullName = firstName + ' ' + lastName;
+  const location = randomise(locationArray);
+  const height = randomHeight();
+  const position = randomise(positionArray);
+  const team = randomise(teamArray);
+
+  return `${fullName} is from ${location}. He is ${height} and is a ${position}. He plays for the ${team}.`;
+};
