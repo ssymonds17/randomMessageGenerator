@@ -1,5 +1,3 @@
-console.log('first line');
-
 const firstNameArray = [
   'Sam',
   'John',
@@ -12,7 +10,7 @@ const firstNameArray = [
   'Craig',
   'Karl'
 ];
-const secondNameArray = [
+const lastNameArray = [
   'Smith',
   'Johnson',
   'Williams',
@@ -134,4 +132,9 @@ const teamArray = [
   'Washington Wizards'
 ];
 
+const randomise = (array) => {
+  return array[Math.floor(Math.random() * array.length)];
+};
+
+console.log(randomise(teamArray));
 // const exampleSentence = `${fullName} is from ${location}. He is ${height} and is a ${position}. He plays for the ${team}.`
